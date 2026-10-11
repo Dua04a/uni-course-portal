@@ -1,6 +1,6 @@
-# University Course Portal
+# uni-course-portal
 
-A role-based university course management interface built with React Admin, React, TypeScript, and Material UI.
+University course management portal built with React, TypeScript, Material UI, and React Admin.
 
 ## Features
 
