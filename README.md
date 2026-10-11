@@ -12,12 +12,23 @@ A university course portal I built to make it easier for admins and students to 
 
 I’m adding screenshots for these pages:
 
-- Admin homepage
-- Secondary admins
-- Create account by admin
-- Student homepage
-- Enrolled courses
-- Student profile
+Admin homepage
+<img width="2880" height="1626" alt="Pasted Graphic" src="https://github.com/user-attachments/assets/13b9c441-837e-47ef-807c-8226d6b420aa" />
+
+Secondary admins
+<img width="2876" height="1624" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/1f5f8578-f11b-4d7d-9e48-3e78b613f10f" />
+
+Create account by admin
+<img width="2880" height="1620" alt="Pasted Graphic 2" src="https://github.com/user-attachments/assets/5d346aeb-f5ef-48e6-aee9-19c26e44e0b2" />
+
+Student homepage
+<img width="2880" height="1622" alt="Pasted Graphic 3" src="https://github.com/user-attachments/assets/ccaa43e3-881c-4157-a189-87df2badc8e8" />
+
+Enrolled courses
+<img width="2880" height="1622" alt="Pasted Graphic 4" src="https://github.com/user-attachments/assets/6a6b8d88-6ddf-41bc-9b3a-cf37c7f3a62c" />
+
+Student profile
+<img width="2880" height="1622" alt="Pasted Graphic 5" src="https://github.com/user-attachments/assets/44207b0f-61ca-408a-833b-fe50846d77b7" />
 
 ## Built with
 
