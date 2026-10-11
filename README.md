@@ -5,7 +5,8 @@ A university course portal I built to make it easier for admins and students to 
 ## What you can do
 
 - Admins can manage courses, students, secondary admins, and student status requests.
-- Students can browse courses, see the courses they enrolled in, and view their profile.
+- Students can browse courses, enroll in courses, drop a course, and view their enrolled courses and profile.
+- Students can request to defer a term, withdraw from the university, or graduate. Admins can review and approve or reject those requests.
 - The app has light and dark themes.
 
 ## Screenshots
