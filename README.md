@@ -1,47 +1,51 @@
-# uni-course-portal
+# Uni Course Portal
 
-University course management portal built with React, TypeScript, Material UI, React Admin, and two Kotlin/Spring Boot services.
+A university course portal I built to make it easier for admins and students to manage courses in one place. This project helped me learn a lot of new things, especially how a React app talks to Spring Boot services and how to build pages for different user roles.
 
-## Features
+## What you can do
 
-- Admin pages for managing courses, students, secondary admins, and student status requests.
-- Student pages for browsing courses, viewing enrolled courses, and viewing a profile.
-- Responsive dashboard and light/dark themes.
-- Course and student backend services in `services/`.
+- Admins can manage courses, students, secondary admins, and student status requests.
+- Students can browse courses, see the courses they enrolled in, and view their profile.
+- The app has light and dark themes.
 
-## Tech stack
+## Screenshots
 
-- React 19 and TypeScript
-- React Admin 5
-- Material UI 7
-- Vite
+I’m adding screenshots for these pages:
+
+- Admin homepage
+- Secondary admins
+- Create account by admin
+- Student homepage
+- Enrolled courses
+- Student profile
+
+## Built with
+
+- React, TypeScript, React Admin, and Material UI
 - Kotlin and Spring Boot
-- MySQL, Kafka, and Redis for the backend services
+- MySQL, Kafka, and Redis
 
-## Run locally
+## Run the frontend
 
-Requirements: Node.js and npm for the frontend. The backend services require JDK 17 or newer, MySQL, Kafka, and Redis.
+You’ll need Node.js and npm.
 
 ```sh
 npm install
 npm run dev
 ```
 
-The frontend expects the backend services to be available locally:
+The frontend uses the backend services at `http://localhost:8080` and `http://localhost:8081`.
 
-- Student service: `http://localhost:8080/api/v1`
-- Course service: `http://localhost:8081/api/v1`
+## Run the backend
 
-## Backend services
+The two services are in the `services` folder:
 
-The repository contains both backend applications:
+- `student-service` runs on port `8080`.
+- `course-service` runs on port `8081` (JobRunr dashboard: `8082`).
 
-- `services/student-service` runs on port `8080`.
-- `services/course-service` runs on port `8081` (JobRunr dashboard on `8082`).
+You’ll need JDK 17 or newer, MySQL, Kafka, and Redis running locally. The services use the MySQL databases `student_db` and `courses_db`, Kafka at `localhost:9092`, and Redis at `localhost:6379`.
 
-Both services use the local MySQL databases `student_db` and `courses_db`, plus Kafka on `localhost:9092`; the course service also uses Redis on `localhost:6379`. Configure these dependencies before starting the services.
-
-Set the following environment variables in your shell or IDE run configurations. Keep real values out of Git:
+Add these environment variables to your IDE run settings or terminal before starting the services:
 
 ```sh
 DB_USERNAME=your_mysql_username
@@ -51,17 +55,17 @@ DEMO_STUDENT_PASSWORD=your_demo_student_password
 DEMO_ADMIN_PASSWORD=your_demo_admin_password
 ```
 
-The demo usernames default to `student-user` and `AdminDua`. You can override them with `DEMO_STUDENT_USERNAME` and `DEMO_ADMIN_USERNAME`.
+The demo usernames default to `student-user` and `AdminDua`. You can change them with `DEMO_STUDENT_USERNAME` and `DEMO_ADMIN_USERNAME`. Keep your actual passwords and secrets private; don’t commit them to GitHub.
 
-From each service directory, start it with the Gradle wrapper:
+Open a terminal in each service folder and run:
 
 ```sh
 ./gradlew bootRun
 ```
 
-Run the command once from `services/student-service` and once from `services/course-service` in separate terminals. On Windows, use `gradlew.bat bootRun`.
+On Windows, use `gradlew.bat bootRun`.
 
-## Useful scripts
+## A couple useful commands
 
 ```sh
 npm run type-check
