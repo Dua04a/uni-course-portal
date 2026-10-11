@@ -25,3 +25,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Kotlin / Gradle backend services
+**/.gradle/
+**/.kotlin/
+**/build/
+**/.idea/
+*.iml
+**/application-local.properties
