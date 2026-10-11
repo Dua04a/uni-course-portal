@@ -1,6 +1,6 @@
 # Uni Course Portal
 
-A university course portal I built to make it easier for admins and students to manage courses in one place. This project helped me learn a lot of new things, especially how a React app talks to Spring Boot services and how to build pages for different user roles.
+A university course portal I built to make it easier for admins and students to manage courses in one place. I learned a lot while building it, especially about React, Kotlin, and connecting separate backend services.
 
 ## What you can do
 
@@ -8,6 +8,10 @@ A university course portal I built to make it easier for admins and students to 
 - Students can browse courses, enroll in courses, drop a course, and view their enrolled courses and profile.
 - Students can request to defer a term, withdraw from the university, or graduate. Admins can review and approve or reject those requests.
 - The app has light and dark themes.
+
+## What I learned
+
+I built the backend as two microservices: one for students and one for courses. They talk to each other through REST, and use Kafka events to keep course enrollment counts in sync. I also got to work with JWT login, MySQL and Spring Data JPA, Redis caching, and background jobs with JobRunr. Elide is set up for JSON:API and GraphQL endpoints too.
 
 ## Screenshots
 
@@ -41,7 +45,12 @@ Student profile
 
 - React, TypeScript, React Admin, and Material UI
 - Kotlin and Spring Boot
-- MySQL, Kafka, and Redis
+- Apache Kafka for enrollment events between services
+- JWT for authentication
+- Spring Data JPA and MySQL for storing data
+- Redis for caching courses
+- JobRunr for background jobs
+- Elide for JSON:API and GraphQL endpoints
 
 ## Run the frontend
 
@@ -61,7 +70,7 @@ The two services are in the `services` folder:
 - `student-service` runs on port `8080`.
 - `course-service` runs on port `8081` (JobRunr dashboard: `8082`).
 
-You’ll need JDK 17 or newer, MySQL, Kafka, and Redis running locally. The services use the MySQL databases `student_db` and `courses_db`, Kafka at `localhost:9092`, and Redis at `localhost:6379`.
+You’ll need JDK 21, MySQL, Kafka, and Redis running locally. The services use the MySQL databases `student_db` and `courses_db`, Kafka at `localhost:9092`, and Redis at `localhost:6379`.
 
 Add these environment variables to your IDE run settings or terminal before starting the services:
 
